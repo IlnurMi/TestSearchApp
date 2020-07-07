@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SearchApp</string>
+    <string name="item_profile">Profile</string>
+    <string name="item_search">Search</string>
+</resources>
