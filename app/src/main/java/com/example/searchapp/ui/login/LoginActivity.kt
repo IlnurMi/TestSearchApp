@@ -1,5 +1,6 @@
 package com.example.searchapp.ui.login
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -20,6 +21,7 @@ class LoginActivity: AppCompatActivity() {
         callbackManager = CallbackManager.Factory.create()
 
         facebook_btn_login.registerCallback(callbackManager, object: FacebookCallback<LoginResult>{
+            @SuppressLint("SetTextI18n")
             override fun onSuccess(result: LoginResult?) {
                 tv_id.text = "UserId: ${result?.accessToken?.userId}"
                 val url: String = "https://graph.facebook.com/${result?.accessToken?.userId}/picture?return_ssl_resources=1"
