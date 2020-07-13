@@ -26,9 +26,9 @@ android {
 }
 
 ext{
-    faceebok_login_version = '7.1.0'
-    google_login_version = ''
-    vk_login_version = ''
+    faceebok_sdk_version = '7.1.0'
+    google_login_version = '18.0.0'
+    vk_sdk_version = '2.2.4'
     picasso_version = '2.71828'
 }
 
@@ -46,7 +46,13 @@ dependencies {
     implementation 'com.google.android.material:material:1.1.0'
 
     // facebook
-    implementation "com.facebook.android:facebook-android-sdk:$faceebok_login_version"
+    implementation "com.facebook.android:facebook-android-sdk:$faceebok_sdk_version"
+
+    // vk
+    implementation "com.vk:androidsdk:$vk_sdk_version"
+
+    // google
+    implementation "com.google.android.gms:play-services-auth:$google_login_version"
 
     // picasso
     implementation "com.squareup.picasso:picasso:$picasso_version"
