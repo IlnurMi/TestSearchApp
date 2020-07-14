@@ -4,4 +4,5 @@ import com.ilnur.domain.models.response.UserModel
 
 interface SearchPresenterListener {
     fun sendUsers(users: List<UserModel>)
+    fun sendError(error: String)
 }

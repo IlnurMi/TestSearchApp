@@ -31,4 +31,14 @@ class UsersAdapter(private var users: MutableList<UserModel>):RecyclerView.Adapt
         notifyDataSetChanged()
     }
 
+    fun addItemsToEnd(list: List<UserModel>){
+        users.addAll(list)
+        notifyDataSetChanged()
+    }
+
+    fun cleanList(){
+        users.clear()
+        notifyDataSetChanged()
+    }
+
 }

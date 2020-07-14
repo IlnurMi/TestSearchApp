@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity(), MainView {
             true
         }
     }
-g
+
     override fun replaceFragment(fragment: Fragment) {
         supportFragmentManager
             .beginTransaction()

@@ -40,6 +40,4 @@ dependencies {
 
     // rxJava
     implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
-
-    // modules
 }

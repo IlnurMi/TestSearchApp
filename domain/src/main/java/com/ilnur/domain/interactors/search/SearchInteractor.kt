@@ -20,7 +20,15 @@ class SearchInteractor(private val searchRepository: SearchRepositoryInterface) 
         searchRepository.getUsers(name, page)
     }
 
+    fun cancelRequest(){
+        searchRepository.cancelRequest()
+    }
+
     override fun sendUsers(users: List<UserModel>) {
         searchPresenterListener.sendUsers(users)
+    }
+
+    override fun sendError(error: String) {
+        searchPresenterListener.sendError(error)
     }
 }

@@ -4,4 +4,5 @@ import com.ilnur.domain.models.response.UserModel
 
 interface SearchRepositoryListener {
     fun sendUsers(users: List<UserModel>)
+    fun sendError(error: String)
 }
