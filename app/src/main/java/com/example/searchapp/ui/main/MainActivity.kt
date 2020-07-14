@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity(), MainView {
                     mainPresenter.navigationItemClick(ConstantUtils.SEARCH_FRAGMENT)
                 }
             }
-            false
+            true
         }
 //
 //        search.setOnQueryTextListener(object : SearchView.OnQueryTextListener{

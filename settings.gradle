@@ -1,4 +1,3 @@
-include ':domain'
-include ':data'
+include ':domain', ':data'
 rootProject.name='SearchApp'
 include ':app'
