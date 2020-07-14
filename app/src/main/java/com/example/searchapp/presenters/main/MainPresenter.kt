@@ -10,7 +10,6 @@ class MainPresenter {
 
     fun setView(view: MainView){
         this.view = view
-        this.view.showSearchView(false)
         this.view.addFragment(ProfileFragment.INSTANCE)
     }
 

@@ -7,5 +7,4 @@ interface MainView {
     fun setListeners()
     fun replaceFragment(fragment: Fragment)
     fun addFragment(fragment: Fragment)
-    fun showSearchView(show: Boolean)
 }

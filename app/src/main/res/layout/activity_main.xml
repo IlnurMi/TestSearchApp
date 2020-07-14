@@ -6,20 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainActivity">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
     <FrameLayout
         android:id="@+id/main_fragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/search"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/navigation_view">
     </FrameLayout>
 

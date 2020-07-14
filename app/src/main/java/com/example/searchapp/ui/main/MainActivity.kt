@@ -38,22 +38,10 @@ class MainActivity : AppCompatActivity(), MainView {
                     mainPresenter.navigationItemClick(ConstantUtils.SEARCH_FRAGMENT)
                 }
             }
-            false
+            true
         }
-//
-//        search.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-//            override fun onQueryTextSubmit(query: String?): Boolean {
-//                Log.d("TAG", "onQueryTextSubmit: $query")
-//                return true
-//            }
-//
-//            override fun onQueryTextChange(newText: String?): Boolean {
-//                Log.d("TAG", "onQueryTextChange: $newText")
-//                return true
-//            }
-//        })
     }
-
+g
     override fun replaceFragment(fragment: Fragment) {
         supportFragmentManager
             .beginTransaction()
@@ -66,12 +54,5 @@ class MainActivity : AppCompatActivity(), MainView {
             .beginTransaction()
             .add(R.id.main_fragment, fragment)
             .commit()
-    }
-
-    override fun showSearchView(show: Boolean) {
-        if (show)
-            search.visibility = View.VISIBLE
-        else
-            search.visibility = View.GONE
     }
 }
