@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="colorAccent">#03DAC5</color>
 
+    <color name="textColor">#0E0E0E</color>
+
     <!-- My customers colors -->
     <color name="colorNavigationView">#FFFF</color>
     <color name="colorIcon">#858585</color>
