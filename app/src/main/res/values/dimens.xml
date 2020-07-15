@@ -7,5 +7,6 @@
     <dimen name="im_height" tools:override="true">52dp</dimen>
     <dimen name="im_width" tools:override="true">52dp</dimen>
     <dimen name="margin" tools:override="true">12dp</dimen>
+    <dimen name="textSize" tools:override="true">22sp</dimen>
 
 </resources>
