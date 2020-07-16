@@ -26,7 +26,13 @@ android {
 }
 
 ext{
-
+    faceebok_sdk_version = '7.1.0'
+    google_login_version = '18.0.0'
+    vk_sdk_version = '2.2.4'
+    picasso_version = '2.71828'
+    rxjava_version = '2.2.19'
+    circle_image_view_version = '3.1.0'
+    rx_android_version = '2.1.0'
 }
 
 dependencies {
@@ -42,6 +48,26 @@ dependencies {
     // material
     implementation 'com.google.android.material:material:1.1.0'
 
+    // facebook
+    implementation "com.facebook.android:facebook-android-sdk:$faceebok_sdk_version"
+
+    // vk
+    implementation "com.vk:androidsdk:$vk_sdk_version"
+
+    // google
+    implementation "com.google.android.gms:play-services-auth:$google_login_version"
+
+    // picasso
+    implementation "com.squareup.picasso:picasso:$picasso_version"
+
+    // rxJava
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rx_android_version"
+
+    // circleImageView
+    implementation "de.hdodenhof:circleimageview:$circle_image_view_version"
+
     // modules
-    project(path:':domain')
+    implementation project(path: ':domain')
+    implementation project(path: ':data')
 }

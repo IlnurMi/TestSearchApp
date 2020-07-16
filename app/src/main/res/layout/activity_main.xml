@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainActivity">
 
-
     <FrameLayout
         android:id="@+id/main_fragment"
         android:layout_width="match_parent"
@@ -14,13 +13,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/navigation_view"/>
+        app:layout_constraintBottom_toTopOf="@id/navigation_view">
+    </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="4dp"
+        android:background="@color/colorNavigationView"
+        app:itemIconTint="@drawable/navigation_items_selector"
+        app:itemIconSize="@dimen/bottom_navigation_item_size"
+        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/menu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

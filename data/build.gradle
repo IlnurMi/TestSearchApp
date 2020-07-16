@@ -17,12 +17,26 @@ android {
     }
 
     buildTypes {
+        debug{
+            minifyEnabled false
+            debuggable true
+            buildConfigField("String", "GITHUB_URL", '"https://api.github.com"')
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "GITHUB_URL", '"https://api.github.com"')
         }
     }
 
+}
+
+ext{
+    retrofit_version = '2.9.0'
+    okHttp_version = '4.8.0'
+    rxjava_version = '2.2.19'
+    picasso_version = '2.71828'
+    rx_android_version = '2.1.0'
 }
 
 dependencies {
@@ -33,4 +47,23 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+
+    // okHttp
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttp_version"
+
+    // rxJava
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rx_android_version"
+
+    // picasso
+    implementation "com.squareup.picasso:picasso:$picasso_version"
+
+    // modules
+    implementation project(path: ':domain')
+
 }
