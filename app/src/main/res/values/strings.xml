@@ -10,6 +10,7 @@
     <string name="log_out">Сменить учетную запись</string>
     <string name="default_name">itoomin</string>
     <string name="_18sp">18sp</string>
+    <string name="sign_in">Sign In</string>
 
     <!-- Vk-->
     <integer name="com_vk_sdk_AppId">7532945</integer>
