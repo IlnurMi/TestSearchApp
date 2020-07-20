@@ -2,17 +2,14 @@
     <string name="app_name">SearchApp</string>
     <string name="item_profile">Profile</string>
     <string name="item_search">Search</string>
-    <string name="vk">Vk</string>
 
     <!-- Facebook -->
-    <string name="facebook_app_id">895426117622021</string>
-    <string name="fb_login_protocol_scheme">fb895426117622021</string>
+    <string name="facebook_app_id">278797336686986</string>
+    <string name="fb_login_protocol_scheme">fb278797336686986</string>
+
     <string name="log_out">Сменить учетную запись</string>
     <string name="default_name">itoomin</string>
     <string name="_18sp">18sp</string>
     <string name="sign_in">Sign In</string>
-
-    <!-- Vk-->
-    <integer name="com_vk_sdk_AppId">7532945</integer>
 
 </resources>
