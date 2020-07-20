@@ -36,21 +36,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_id"/>
 
-    <Button
-        android:id="@+id/vk_btn_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/vk_sign"
-        android:elevation="4dp"
-        android:text="@string/vk"
-        android:textColor="@color/vkTextColor"
-        android:layout_marginStart="@dimen/margin"
-        android:layout_marginEnd="@dimen/margin"
-        android:layout_marginTop="@dimen/margin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/facebook_btn_login"/>
-
     <com.google.android.gms.common.SignInButton
         android:id="@+id/google_btn_login"
         android:layout_width="match_parent"
@@ -60,6 +45,6 @@
         android:layout_marginTop="@dimen/margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/vk_btn_login"/>
+        app:layout_constraintTop_toBottomOf="@id/facebook_btn_login"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

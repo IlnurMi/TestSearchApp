@@ -2,9 +2,6 @@ package com.example.searchapp.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
-import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import com.example.searchapp.R
 import com.example.searchapp.interfaces.main.MainView
