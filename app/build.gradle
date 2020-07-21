@@ -28,7 +28,6 @@ android {
 ext{
     faceebok_sdk_version = '7.1.0'
     google_login_version = '18.0.0'
-    vk_sdk_version = '2.2.4'
     picasso_version = '2.71828'
     rxjava_version = '2.2.19'
     circle_image_view_version = '3.1.0'
@@ -50,9 +49,6 @@ dependencies {
 
     // facebook
     implementation "com.facebook.android:facebook-android-sdk:$faceebok_sdk_version"
-
-    // vk
-    implementation "com.vk:androidsdk:$vk_sdk_version"
 
     // google
     implementation "com.google.android.gms:play-services-auth:$google_login_version"
