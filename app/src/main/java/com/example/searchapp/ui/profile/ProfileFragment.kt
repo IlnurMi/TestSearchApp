@@ -9,14 +9,11 @@ import com.example.searchapp.R
 import com.example.searchapp.interfaces.profile.ProfileView
 import com.example.searchapp.presenters.profile.ProfilePresenter
 import com.example.searchapp.ui.login.LoginActivity
-import com.example.searchapp.ui.main.MainActivity
 import com.example.searchapp.utils.ConstantUtils
 import com.example.searchapp.utils.NavigationUtil
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
 import com.ilnur.data.preferences.PreferenceRepository
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.profile_fragment.*

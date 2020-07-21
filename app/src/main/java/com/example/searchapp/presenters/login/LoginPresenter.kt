@@ -10,7 +10,7 @@ class LoginPresenter {
         loginView?.checkAuthorization()
     }
 
-    fun saveUserInfo(type: Int){
+    fun saveUser(type: Int){
         loginView?.saveUserInfo(type)
     }
 
@@ -19,6 +19,5 @@ class LoginPresenter {
     }
 
     fun stop(){
-        loginView = null
     }
 }

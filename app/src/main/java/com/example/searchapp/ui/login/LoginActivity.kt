@@ -1,6 +1,5 @@
 package com.example.searchapp.ui.login
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -28,10 +27,10 @@ class LoginActivity : AppCompatActivity(), LoginView {
     private lateinit var gso: GoogleSignInOptions
     private lateinit var preferenceRepository: PreferenceRepository
     private val RC_SIGN_IN: Int = 0
-    private var RC_SIGN_F: Int? = null
-    private lateinit var firstName: String
-    private lateinit var lastName: String
-    private lateinit var photoUrl: String
+    private var RC_SIGN_F: Int? = 0
+    private var firstName: String? = null
+    private var lastName: String? = null
+    private var photoUrl: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -78,6 +77,11 @@ class LoginActivity : AppCompatActivity(), LoginView {
             loginPresenter.startActivity()
     }
 
+    private fun signIn() {
+        val signInIntent = mGoogleSignInClient.signInIntent
+        startActivityForResult(signInIntent, RC_SIGN_IN)
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         when (requestCode) {
@@ -87,7 +91,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
             }
 
             RC_SIGN_F -> {
-                callbackManager.onActivityResult(RC_SIGN_F!!, resultCode, data)
+                callbackManager.onActivityResult(requestCode, resultCode, data)
             }
         }
     }
@@ -99,15 +103,10 @@ class LoginActivity : AppCompatActivity(), LoginView {
             firstName = account?.givenName.toString()
             lastName = account?.familyName.toString()
             photoUrl = account?.photoUrl.toString()
-            loginPresenter.saveUserInfo(ConstantUtils.GOOGLE)
+            loginPresenter.saveUser(ConstantUtils.GOOGLE)
         } catch (e: ApiException) {
             // TODO handle error
         }
-    }
-
-    private fun signIn() {
-        val signInIntent = mGoogleSignInClient.signInIntent
-        startActivityForResult(signInIntent, RC_SIGN_IN)
     }
 
     val tokenTracker = object : AccessTokenTracker() {
@@ -128,7 +127,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
             lastName = `object`?.getString("last_name").toString()
             photoUrl =
                 "https://graph.facebook.com/${`object`?.getString("id")}/picture?width=250&height=250"
-            loginPresenter.saveUserInfo(ConstantUtils.FACEBOOK)
+            loginPresenter.saveUser(ConstantUtils.FACEBOOK)
         }
 
         val parameters = Bundle()
@@ -139,7 +138,7 @@ class LoginActivity : AppCompatActivity(), LoginView {
 
     override fun saveUserInfo(type: Int) {
         preferenceRepository.saveAccountType(type)
-        preferenceRepository.saveUserInfo(photoUrl, "$firstName $lastName")
+        photoUrl?.let { preferenceRepository.saveUserInfo(it, "$firstName $lastName") }
         preferenceRepository.setAuthorization(true)
         loginPresenter.startActivity()
     }
@@ -154,6 +153,5 @@ class LoginActivity : AppCompatActivity(), LoginView {
 
     override fun onStop() {
         super.onStop()
-        loginPresenter.stop()
     }
 }

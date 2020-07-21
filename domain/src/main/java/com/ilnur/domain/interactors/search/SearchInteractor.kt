@@ -1,6 +1,5 @@
 package com.ilnur.domain.interactors.search
 
-import android.util.Log
 import com.ilnur.domain.interfaces.repositories.search.SearchRepositoryInterface
 import com.ilnur.domain.listeners.search.SearchPresenterListener
 import com.ilnur.domain.listeners.search.SearchRepositoryListener
